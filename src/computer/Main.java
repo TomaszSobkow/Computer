@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Computer computer = new Computer(new Monitor(), new HDD_Drive() { });
+        Computer computer = new Computer(new Monitor(), new HDD_Drive());
 
         computer.getDriveType().addFile(new File("Learning programming"));
         computer.getDriveType().addFile(new File("Learning programming"));
@@ -17,6 +17,7 @@ public class Main {
         computer.setDriveType(new SSD_Drive());
         computer.getDriveType().addFile(new File("New File"));
         computer.getDriveType().addFile(new File("New File2"));
+        computer.getMonitor().HDReady();
         System.out.println(computer );
 
         //1:42:08
