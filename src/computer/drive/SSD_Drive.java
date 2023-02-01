@@ -11,8 +11,7 @@ public class SSD_Drive implements Drive {
 
     @Override
     public void addFile(File file) {
-        String key = file.toString();
-        files.put(key,file);
+      files.put(file.getName(), file);
     }
 
     @Override
