@@ -1,6 +1,7 @@
 package computer;
 
 import computer.drive.Drive;
+import computer.drive.SSD_Drive;
 import computer.usbDeviceses.HeadPhone;
 import computer.usbDeviceses.USBDevice;
 
@@ -22,19 +23,32 @@ public class Computer {
 
     public Computer(){
 
-    };
+        this(new Monitor(),new SSD_Drive());
+    }
 
     public Monitor getMonitor() { return monitor; }
     public void setMonitor(Monitor monitor) { this.monitor = monitor; }
 
-    public Drive getDrive() { return drive; }
+    public Drive drive() { return drive; }
     public void setDrive(Drive drive) { this.drive = drive; }
 
     public HeadPhone getHeadPhone() { return headPhone; }
     public void setHeadPhone(HeadPhone headPhone) { this.headPhone = headPhone; }
 
-    public List<USBDevice> getUSBDeviceList() { return USBDeviceList;  }
+    public List<USBDevice> getUSBDevices() {
+        return USBDeviceList;
+    }
 
+    public void addNewUsbDevice(USBDevice newUSbDevice){
+        boolean isConnected = newUSbDevice.connect();
+        if(isConnected){
+            USBDeviceList.add(newUSbDevice);
+        }
+    }
+
+    public void removeUsbDevice(USBDevice usbDevice){
+        usbDevice.disconnect();
+    }
     @Override
     public String toString() {
         String headPhoneAsString = (this.headPhone == null)? "Not Connected" : this.headPhone.getUsbDeviceName();
@@ -44,7 +58,7 @@ public class Computer {
                   this.monitor +
                 "\n\tDrive: " + this.drive +
                 "\n\tHeadphone: " + headPhoneAsString+
-                "\b\n\tList of Files: "+ getDrive().listFiles();
+                "\b\n\tList of Files: "+ drive().listFiles();
     }
 }
 
