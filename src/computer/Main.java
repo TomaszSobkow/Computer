@@ -10,13 +10,13 @@ public class Main {
 
         Computer computer = new Computer(new Monitor(), new HDD_Drive());
 
-        computer.getDriveType().addFile(new File("Learning programming"));
-        computer.getDriveType().addFile(new File("Learning programming"));
+        computer.getDrive().addFile(new File("Learning programming"));
+        computer.getDrive().addFile(new File("Learning programming"));
         System.out.println(computer );
 
-        computer.setDriveType(new SSD_Drive());
-        computer.getDriveType().addFile(new File("New File"));
-        computer.getDriveType().addFile(new File("New File2"));
+        computer.setDrive(new SSD_Drive());
+        computer.getDrive().addFile(new File("New File"));
+        computer.getDrive().addFile(new File("New File2"));
         computer.getMonitor().HDReady();
         System.out.println(computer );
 

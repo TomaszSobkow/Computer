@@ -10,21 +10,25 @@ import java.util.List;
 public class Computer {
 
     private Monitor monitor;
-    private Drive driveType;
+    private Drive drive;
     private HeadPhone headPhone;
 
     List<USBDevice> USBDeviceList = new ArrayList<>();
 
     public Computer(Monitor monitor, Drive drive) {
         this.monitor = monitor;
-        this.driveType = drive;
+        this.drive = drive;
     }
+
+    public Computer(){
+
+    };
 
     public Monitor getMonitor() { return monitor; }
     public void setMonitor(Monitor monitor) { this.monitor = monitor; }
 
-    public Drive getDriveType() { return driveType; }
-    public void setDriveType(Drive driveType) { this.driveType = driveType; }
+    public Drive getDrive() { return drive; }
+    public void setDrive(Drive drive) { this.drive = drive; }
 
     public HeadPhone getHeadPhone() { return headPhone; }
     public void setHeadPhone(HeadPhone headPhone) { this.headPhone = headPhone; }
@@ -38,9 +42,9 @@ public class Computer {
         String filesOnDrive;
         return "Computer" +
                   this.monitor +
-                "\n\tDrive: " + this.driveType +
+                "\n\tDrive: " + this.drive +
                 "\n\tHeadphone: " + headPhoneAsString+
-                "\n\tList of Files: "+ getDriveType().listFiles();
+                "\b\n\tList of Files: "+ getDrive().listFiles();
     }
 }
 

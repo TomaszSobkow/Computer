@@ -19,6 +19,4 @@ public class HeadPhone implements USBDevice{
     @Override
     public String getUsbDeviceName() { return this.headPhoneName; }
 
-    @Override
-    public String toString() { return "HeadPhone: " + headPhoneName; }
 }
