@@ -10,13 +10,14 @@ public class HeadPhone implements USBDevice{
 
     @Override
     public boolean connect() {
-        System.out.println("Connected");
+        System.out.println("Headphone Connected");
         return true; }
     @Override
     public boolean disconnect() {
-        System.out.println("Disconnected");
+        System.out.println("Headphone Disconnected");
         return true; }
     @Override
-    public String getUsbDeviceName() { return this.headPhoneName; }
+    public String getUsbDeviceName() {
+        return this.headPhoneName; }
 
 }

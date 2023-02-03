@@ -30,17 +30,11 @@ public class MemoryStick implements USBDevice{
 
     @Override
     public String getUsbDeviceName() {
-        return null;
+        return this.brand;
     }
 
     public void eject(){
         System.out.println("Ejecting Memory Stick");
         ejected = true;
-    }
-
-    @Override
-    public String toString() {
-        String connected = connect()? "Connected "+ this.brand.toUpperCase():"Disconnected";
-        return "\nMemoryStick " + connected;
     }
 }

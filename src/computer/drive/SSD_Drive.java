@@ -32,6 +32,6 @@ public class SSD_Drive implements Drive {
 
     @Override
     public String toString() {
-        return "SSD";
+        return "\n\tDrive: SSD";
     }
 }

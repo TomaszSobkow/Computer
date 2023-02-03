@@ -2,9 +2,9 @@ package computer;
 
 import computer.drive.Drive;
 import computer.drive.SSD_Drive;
-import computer.usbDeviceses.HeadPhone;
-import computer.usbDeviceses.USBDevice;
+import computer.usbDeviceses.*;
 
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,16 +14,12 @@ public class Computer {
     private Drive drive;
     private HeadPhone headPhone;
 
-    List<USBDevice> USBDeviceList = new ArrayList<>();
-
-    public Computer(Monitor monitor, Drive drive) {
-        this.monitor = monitor;
-        this.drive = drive;
-    }
+   private List<USBDevice> USBDeviceList = new ArrayList<>();
 
     public Computer(){
+    this.monitor = new Monitor();
+    this.drive = new SSD_Drive();
 
-        this(new Monitor(),new SSD_Drive());
     }
 
     public Monitor getMonitor() { return monitor; }
@@ -36,6 +32,7 @@ public class Computer {
     public void setHeadPhone(HeadPhone headPhone) { this.headPhone = headPhone; }
 
     public List<USBDevice> getUSBDevices() {
+
         return USBDeviceList;
     }
 
@@ -47,18 +44,53 @@ public class Computer {
     }
 
     public void removeUsbDevice(USBDevice usbDevice){
-        usbDevice.disconnect();
+        if(USBDeviceList.contains(usbDevice)){
+            boolean isDisconnected  = usbDevice.disconnect();
+            if(!isDisconnected){
+                System.out.println("Forcibly removed "+ usbDevice.getClass().getSimpleName()+" "+usbDevice.getUsbDeviceName());
+                USBDeviceList.remove(usbDevice);
+            }
+        }else {
+            System.out.println("USB device not Found");
+        }
     }
     @Override
     public String toString() {
-        String headPhoneAsString = (this.headPhone == null)? "Not Connected" : this.headPhone.getUsbDeviceName();
 
-        String filesOnDrive;
-        return "Computer" +
+        String headPhoneAsString = "";
+        String memoryStickasString = "";
+        String keyboardAsString = "";
+        String mousAsString = "";
+        for(USBDevice usbDevice: USBDeviceList){
+            if(usbDevice instanceof Mouse){
+                mousAsString = "\n\tMouse: " + usbDevice.getUsbDeviceName();
+            }
+
+            if(usbDevice instanceof MemoryStick){
+                memoryStickasString = "\n\tMemory Stick: " + usbDevice.getUsbDeviceName();
+            }
+
+            if(usbDevice instanceof Keyboard){
+                keyboardAsString = "\n\tKeyboard: " + usbDevice.getUsbDeviceName();
+            }
+
+
+            if(usbDevice instanceof HeadPhone){
+                headPhoneAsString = "\n\tHeadphone: " + usbDevice.getUsbDeviceName();
+
+            }
+        }
+
+        String listOfFiles = drive().listFiles().isEmpty()? "" : "\n\tList of Files: ";
+
+        return "\nComputer" +
                   this.monitor +
-                "\n\tDrive: " + this.drive +
-                "\n\tHeadphone: " + headPhoneAsString+
-                "\b\n\tList of Files: "+ drive().listFiles();
+                  this.drive +
+                  headPhoneAsString +
+                  memoryStickasString+
+                  keyboardAsString+
+                  mousAsString+
+                  listOfFiles + drive().listFiles();
     }
 }
 

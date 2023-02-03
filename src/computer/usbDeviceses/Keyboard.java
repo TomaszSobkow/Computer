@@ -9,11 +9,14 @@ public class Keyboard implements USBDevice{
     }
     @Override
     public boolean connect() {
-        return false;
+        System.out.println("Keyboard Connected");
+        return true;
     }
 
     @Override
     public boolean disconnect() {
+
+        System.out.println("Keyboard Disconnected");
         return false;
     }
 
