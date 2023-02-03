@@ -22,21 +22,9 @@ public class Main {
         computer.addNewUsbDevice(new Mouse("Dell"));
         computer.addNewUsbDevice(new Keyboard("Logitech"));
         System.out.println(computer);
-        computer.getUSBDevices();
-
-
-
-//        computer.drive().addFile(new File("Learning programming"));
-//        computer.drive().addFile(new File(("0000000000")));
-//        System.out.println(computer );
-
-//        computer.setDrive(new SSD_Drive());
-//        computer.drive().addFile(new File("New File"));
-//        computer.drive().addFile(new File("New File2"));
-//        computer.getMonitor().HDReady();
-//        System.out.println(computer );
-//
-//        System.out.println(new Student("Software development","Tomasz",48));
+        computer.removeUsbDevice(memoryStick);
+        memoryStick.eject();
+        computer.removeUsbDevice(memoryStick);
 
         //1:44:46
         // on YouTube course https://www.youtube.com/watch?v=OvY0f-IWlos

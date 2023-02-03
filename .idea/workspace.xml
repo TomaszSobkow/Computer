@@ -5,26 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8c7625e-6ee7-451d-b018-f68f286ef337" name="Changes" comment="changes">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/computer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/computer/computer/Computer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/Computer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/computer/computer/File.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/File.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/computer/computer/Main$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/computer/computer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/computer/computer/Monitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/Monitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/computer/computer/drive/Drive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/drive/Drive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/computer/computer/drive/HDD_Drive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/drive/HDD_Drive.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/computer/computer/drive/SSD_Drive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/drive/SSD_Drive.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/HeadPhone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/HeadPhone.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/Keyboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/Keyboard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/MemoryStick.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/MemoryStick.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/Mouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/Mouse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/USBDevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/computer/computer/usbDeviceses/USBDevice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computer/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computer/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/file/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computer/drive/Drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/drive/Drive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computer/drive/HDD_Drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/drive/HDD_Drive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/computer/drive/SSD_Drive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/drive/SSD_Drive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/computer/usbDeviceses/MemoryStick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/usbDeviceses/MemoryStick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/computer/usbDeviceses/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/usbDeviceses/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/computer/usbDeviceses/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/computer/usbDeviceses/Keyboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,18 +55,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="computer.Main" />
       <module name="computer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="computer.*" />
+          <option name="PATTERN" value="computer.file.pdf.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

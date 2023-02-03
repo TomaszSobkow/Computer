@@ -46,12 +46,9 @@ public class Computer {
     public void removeUsbDevice(USBDevice usbDevice){
         if(USBDeviceList.contains(usbDevice)){
             boolean isDisconnected  = usbDevice.disconnect();
-            if(!isDisconnected){
-                System.out.println("Forcibly removed "+ usbDevice.getClass().getSimpleName()+" "+usbDevice.getUsbDeviceName());
-                USBDeviceList.remove(usbDevice);
+            if(isDisconnected){
+               USBDeviceList.remove(usbDevice);
             }
-        }else {
-            System.out.println("USB device not Found");
         }
     }
     @Override

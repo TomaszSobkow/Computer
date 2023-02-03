@@ -17,7 +17,7 @@ public class Keyboard implements USBDevice{
     public boolean disconnect() {
 
         System.out.println("Keyboard Disconnected");
-        return false;
+        return true;
     }
 
     @Override
